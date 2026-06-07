@@ -59,6 +59,23 @@ CMA
 INR A 
 HLT
 
+;increment a 16 bit number stored in H-L pair
+
+JMP START
+
+;data
+
+;code
+START: NOP
+
+;Start writing your code here
+LXI H, 01H    ;LXI instead of MVI beacuse LXI stores 16 bit while the other is only 8 bit storaage
+INR L
+JNZ DONE ;JNZ JUMP IF NOT ZERO 
+INR H
+
+DONE:
+HLT
 
 
 
