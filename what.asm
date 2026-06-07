@@ -35,3 +35,30 @@ CMA
 INR A
 HLT
 
+;if carry = 1 jc jump  A= small  skip CMA
+
+;<Program title>
+
+JMP START
+
+;data
+
+;code
+START: NOP
+
+;Start writing your code here
+MVI A, 06H
+SUI 07H
+JC SKIP
+CMA
+INR A
+HLT
+
+SKIP:
+CMA 
+INR A 
+HLT
+
+
+
+
