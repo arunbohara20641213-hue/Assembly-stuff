@@ -49,7 +49,7 @@ START: NOP
 ;Start writing your code here
 MVI A, 06H
 SUI 07H
-JC SKIP
+JC SKIP ;using jc instead of JNC for JNC HUMPS WHEN carry = 0
 CMA
 INR A
 HLT
