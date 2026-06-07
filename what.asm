@@ -89,6 +89,20 @@ DAD B ; use DAD for EFFICENCY
 HLT
 
 
+;subtraction of 16 bits in 8085
+LXI H, 9BDFH    ; HL = 9BDFH 
+LXI B, 89ABH    ; BC = 89ABH 
 
+
+MOV A, L        ; A = DFH
+SUB C           ; A = DF - AB = 34H  → CY=0
+MOV L, A        ; L = 34H
+
+
+MOV A, H        ; A = 9BH
+SBB B           ; A = 9B - 89 - CY = 12H
+MOV H, A        ; H = 12H
+
+HLT             
 
 
