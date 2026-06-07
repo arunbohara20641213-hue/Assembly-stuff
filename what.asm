@@ -28,7 +28,6 @@ JMP START
 ;code
 START: NOP
 
-;Start writing your code here
 MVI A, 05H
 SUI 08H
 CMA
@@ -36,8 +35,6 @@ INR A
 HLT
 
 ;if carry = 1 jc jump  A= small  skip CMA
-
-;<Program title>
 
 JMP START
 
@@ -76,6 +73,22 @@ INR H
 
 DONE:
 HLT
+
+;add two 16 bit
+
+JMP START
+
+;data
+
+;code
+START: NOP
+
+LXI H, 3000H
+LXI B, 2000H
+DAD B ; use DAD for EFFICENCY
+HLT
+
+
 
 
 
