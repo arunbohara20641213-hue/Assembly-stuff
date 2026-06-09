@@ -109,13 +109,18 @@ HLT
 
 
 
+;;load 16 bit number stored in memory loaction 2000 and stooere its 2s complimeeeent in memiryyyyyyyyy locatioaon 2010
+
+
+
 LXI H, 3572H
 mov A,L
-sub E
+cma
+adi 01H
 mov L,A
 mov A,H
-sbb D
+CMA
+aci 00H
 mov H,A
 SHLD 2010H
 HLT
-
